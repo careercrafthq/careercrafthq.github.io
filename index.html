@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CareerCraft</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <img src="images/logo.png" width="36">
+
+    <div class="center-links">
+        <a href="#features" data-i18n="nav_features">Features</a>
+        <a href="#how" data-i18n="nav_how">How it works</a>
+        <a href="#feedback" data-i18n="nav_feedback">Feedback</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="#" class="login" data-i18n="nav_login">Login</a>
+        <a href="#" class="signup" data-i18n="nav_signup">Sign up</a>
+        <div class="lang-dropdown">
+
+    <button class="lang-btn">
+        🌐 Language
+    </button>
+
+    <ul class="lang-menu">
+
+        <li data-lang="en-us">🇺🇸 English (US)</li>
+        <li data-lang="en-uk">🇬🇧 English (UK)</li>
+        <li data-lang="en-au">🇦🇺 English (AU)</li>
+
+        <li data-lang="de">🇩🇪 German</li>
+        <li data-lang="fr">🇫🇷 French</li>
+        <li data-lang="es">🇪🇸 Spanish</li>
+        <li data-lang="it">🇮🇹 Italian</li>
+        <li data-lang="nl">🇳🇱 Dutch</li>
+
+        <li data-lang="pt-pt">🇵🇹 Portuguese</li>
+        <li data-lang="pt-br">🇧🇷 Portuguese (BR)</li>
+
+        <li data-lang="pl">🇵🇱 Polish</li>
+        <li data-lang="cs">🇨🇿 Czech</li>
+        <li data-lang="sk">🇸🇰 Slovak</li>
+        <li data-lang="hu">🇭🇺 Hungarian</li>
+        <li data-lang="ro">🇷🇴 Romanian</li>
+        <li data-lang="bg">🇧🇬 Bulgarian</li>
+        <li data-lang="el">🇬🇷 Greek</li>
+
+        <li data-lang="sv">🇸🇪 Swedish</li>
+        <li data-lang="da">🇩🇰 Danish</li>
+        <li data-lang="no">🇳🇴 Norwegian</li>
+        <li data-lang="fi">🇫🇮 Finnish</li>
+
+        <li data-lang="hr">🇭🇷 Croatian</li>
+        <li data-lang="bs">🇧🇦 Bosnian</li>
+        <li data-lang="sr">🇷🇸 Serbian</li>
+
+    </ul>
+
+</div>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <h1 data-i18n="brand_name">CareerCraft</h1>
+
+    <h2 data-i18n="hero_tagline">Craft your career</h2>
+
+    <p class="hero-text" data-i18n="hero_description">
+        Create a professional cover letter in seconds.  
+        Enter the job title, paste the job description and add your skills.  
+        CareerCraft will turn your information into a polished cover letter ready to send to employers.
+    </p>
+
+    <a href="#generator">
+        <button class="cta" data-i18n="hero_cta">Try it now</button>
+    </a>
+
+</section>
+
+<section class="features" id="features">
+
+    <h3 data-i18n="features_title">What CareerCraft does</h3>
+
+    <p data-i18n="features_text">
+    CareerCraft helps you instantly generate professional cover letters tailored to your job application using AI. It saves time and improves your chances of getting noticed by employers.
+    </p>
+
+</section>
+
+<section id="how" class="how">
+
+    <h3 data-i18n="how_title">How to use CareerCraft</h3>
+
+    <p data-i18n="how_step1">• Enter the job title you are applying for</p>
+    <p data-i18n="how_step2">• Paste the job description and your skills</p>
+    <p data-i18n="how_step3">• Click "Generate" and get your result instantly</p>
+
+</section>
+
+<form id="generator">
+
+<h2 class="app-title" data-i18n="cl_generator_title">Cover Letter Generator</h2>
+
+<input id="title" data-i18n-placeholder="cl_job_title" placeholder="Job Title" required>
+
+<textarea id="description" data-i18n-placeholder="cl_job_desc" placeholder="Job Description" required></textarea>
+
+<label data-i18n="cl_style_label" style="display:block;margin-top:20px;font-weight:bold;color:#111;">
+Choose writing style for the letter (optional)
+</label>
+
+<select id="cl-template">
+    <option value="" data-i18n="no_template">No template (default)</option>
+    <option value="modern" data-i18n="modern">Modern</option>
+    <option value="corporate" data-i18n="corporate">Corporate</option>
+    <option value="minimal" data-i18n="minimal">Minimal</option>
+    <option value="creative" data-i18n="creative">Creative</option>
+</select>
+
+<!-- UPLOAD CV -->
+<label data-i18n="upload_cv_label" style="display:block;margin-top:20px;font-weight:bold;color:#111;">
+Upload your CV (PDF)
+</label>
+
+<input type="file" id="cv" accept=".pdf" required>
+
+<p data-i18n="no_cv_text" style="font-size:13px;color:#666;margin-top:6px;">
+Don't have a CV yet?
+</p>
+
+<a href="#cv-generator" data-i18n="create_cv_here" style="color:#2563eb;font-weight:bold;text-decoration:none;">
+Create one here
+</a>
+</p>
+
+<!-- ================= COVER LETTER TEMPLATES ================= -->
+
+<h2 class="templates-title" data-i18n="choose_cl_template">Choose visual design template (optional)</h2>
+
+<div class="templates">
+
+    <!-- DEFAULT -->
+  <div class="template-card selected" data-template="">
+      <div class="template-preview default-preview"></div>
+      <p data-i18n="default">Default</p>
+  </div>
+
+  <div class="template-card" data-template="modern">
+      <div class="template-preview modern-preview"></div>
+      <p data-i18n="modern">Modern</p>
+  </div>
+
+  <div class="template-card" data-template="corporate">
+      <div class="template-preview corporate-preview"></div>
+      <p data-i18n="corporate">Corporate</p>
+  </div>
+
+  <div class="template-card" data-template="minimal">
+      <div class="template-preview minimal-preview"></div>
+      <p data-i18n="minimal">Minimal</p>
+  </div>
+
+  <div class="template-card" data-template="creative">
+      <div class="template-preview creative-preview"></div>
+      <p data-i18n="creative">Creative</p>
+  </div>
+
+</div>
+
+<button type="submit" data-i18n="generate_btn">Generate</button>
+
+</form>
+
+<h2 class="result-title" data-i18n="your_cl">Your Cover Letter</h2>
+
+<textarea id="result" data-i18n-placeholder="cl_result_placeholder"
+placeholder="Your generated cover letter will appear here..." rows="12"></textarea>
+
+<button id="download-cl" class="download-btn" data-i18n="download_pdf">
+Download as PDF
+</button>
+
+<!-- ================= CV GENERATOR ================= -->
+
+<div id="cv-generator">
+
+<h2 class="app-title" data-i18n="cv_generator_title">CV Generator</h2>
+
+<!-- UPLOAD PHOTO (OPTIONAL) -->
+<label style="display:block;margin-top:20px;font-weight:bold;color:#111;" data-i18n="upload_photo_label">
+Upload photo (optional)
+</label>
+
+<input type="file" id="cv-photo" accept=".jpg,.jpeg,.png">
+
+<p style="font-size:13px;color:#666;margin-top:6px;" data-i18n="photo_hint">
+JPG or PNG. Recommended square photo (e.g. 400x400px).
+</p>
+
+<input id="cv-name" data-i18n-placeholder="full_name" placeholder="Full Name" required>
+
+<textarea id="cv-contacts" data-i18n-placeholder="contacts" placeholder="Email, phone or location (you can write one or all)" required></textarea>
+
+<input id="cv-title" data-i18n-placeholder="professional_title" placeholder="Professional Title (e.g. Sales Representative)" required>
+
+<textarea id="cv-summary" data-i18n-placeholder="summary" placeholder="Short Professional Summary" required></textarea>
+
+<textarea id="cv-experience" data-i18n-placeholder="experience" placeholder="Work Experience (jobs, companies, responsibilities)" required></textarea>
+
+<textarea id="cv-education" data-i18n-placeholder="education" placeholder="Education" required></textarea>
+
+<textarea id="cv-skills" data-i18n-placeholder="skills" placeholder="Skills" required></textarea>
+
+<label style="display:block;margin-top:20px;font-weight:bold;color:#111;" data-i18n="cv_style_label">
+Choose writing style for the CV (optional)
+</label>
+
+<select id="cv-template">
+    <option value="" data-i18n="no_template">No template (default)</option>
+    <option value="modern" data-i18n="modern">Modern</option>
+    <option value="professional" data-i18n="professional">Professional</option>
+    <option value="minimal" data-i18n="minimal">Minimal</option>
+    <option value="creative" data-i18n="creative">Creative</option>
+</select>
+
+<!-- ================= CV TEMPLATES ================= -->
+
+<h2 class="templates-title" data-i18n="choose_cv_template">Choose CV visual design template (optional)</h2>
+
+<div class="templates">
+
+    <!-- DEFAULT -->
+  <div class="template-card selected" data-template="">
+      <div class="template-preview default-preview"></div>
+      <p data-i18n="default">Default</p>
+  </div>
+
+  <div class="template-card" data-template="modern-cv">
+      <div class="template-preview cv-modern"></div>
+      <p data-i18n="modern">Modern</p>
+  </div>
+
+  <div class="template-card" data-template="professional-cv">
+      <div class="template-preview cv-professional"></div>
+      <p data-i18n="professional">Professional</p>
+  </div>
+
+  <div class="template-card" data-template="minimal-cv">
+      <div class="template-preview cv-minimal"></div>
+      <p data-i18n="minimal">Minimal</p>
+  </div>
+
+  <div class="template-card" data-template="creative-cv">
+      <div class="template-preview cv-creative"></div>
+      <p data-i18n="creative">Creative</p>
+  </div>
+
+</div>
+
+<button type="submit" data-i18n="generate_btn">Generate</button>
+
+</div>
+
+<h2 class="result-title" data-i18n="your_cv">Your CV</h2>
+
+<textarea id="cv-result" data-i18n-placeholder="cv_result_placeholder"
+placeholder="Your generated CV will appear here..." rows="12"></textarea>
+
+<button id="download-cv" class="download-btn" data-i18n="download_pdf">
+Download as PDF
+</button>
+
+<p class="disclaimer" data-i18n="disclaimer">
+Disclaimer: CareerCraft helps generate CVs and cover letters for inspiration only.
+Always review and edit the content before use. We do not guarantee job interviews or employment.
+</p>
+
+<section class="feedback-section">
+
+<form id="feedback">
+
+<h3 data-i18n="feedback_title">Help us improve CareerCraft</h3>
+
+<p data-i18n="feedback_text1">
+CareerCraft is currently in its early stage and free to use.
+We are looking for early users who can help us improve the product.
+</p>
+
+<p data-i18n="feedback_text2">
+If you enjoy using CareerCraft, we would love to hear your feedback.
+Your comment may be featured as a testimonial in future versions of the app.
+</p>
+
+<textarea data-i18n-placeholder="feedback_placeholder" placeholder="Leave your feedback here" required></textarea>
+
+<input data-i18n-placeholder="name_optional" placeholder="Your name (optional)">
+
+<button type="submit" data-i18n="send_feedback">Send Feedback</button>
+
+</form>
+
+</section>
+
+<footer class="footer">
+    <p data-i18n="brand_name">CareerCraft</p>
+    <p data-i18n="footer_desc">AI cover letter generator</p>
+    <p data-i18n="copyright">© 2026 CareerCraft</p>
+    <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
+</footer>
+
+<script src="translations.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
